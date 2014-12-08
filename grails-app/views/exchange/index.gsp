@@ -50,11 +50,11 @@
 
 			<g:if test="${pastExchanges}">
 				<div class="page-header">
-					<h2>Intercambios activos</h2>
+					<h2>Intercambios pasados</h2>
 				</div>
 				<div class="container-fluid">
 					<div class="row">
-						<g:each in="pastExchanges" status="i" var="exchangeInstance">
+						<g:each in="${pastExchanges}" status="i" var="exchangeInstance">
 							<div class="col-md-4">
 								<a href="${createLink(action:'show',id:exchangeInstance?.id) }">
 									<section class="panel panel-box info-box">
