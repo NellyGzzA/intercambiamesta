@@ -19,22 +19,18 @@
 				</div>
 
 				<div class="panel-body">
-					<g:if test="${flash.error}">
-						<div class="alert alert-danger">
-							<g:message error="${flash.error}"/>
-						</div>
-					</g:if>
-
-					<g:hasErrors bean="${exchangeInstance}">
-						<g:eachError bean="${exchangeInstance}" var="error">
-							<div class="alert alert-danger">
-								<g:message error="${error}"/>
-							</div>
-						</g:eachError>
-					</g:hasErrors>
-
 					<form action='${createLink(controller:'exchange',action:'save')}' class="form-horizontal" method='POST' autocomplete='off'>
 						<g:render template="form"/>
+
+						<div class="form-group">
+							<div class="col-md-offset-2 col-md-6">
+								<g:if test="${flash.error}">
+									<div class="alert alert-danger" style="margin-left:0; margin-right:0">
+										<g:message error="${flash.error}"/>
+									</div>
+								</g:if>
+							</div>
+						</div>
 
 						<div class="form-group">
 							<div class="col-md-offset-2 col-md-6">

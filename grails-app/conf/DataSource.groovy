@@ -18,7 +18,7 @@ environments {
 			driverClassName = "com.mysql.jdbc.Driver"
 			
             username = "root"
-			password = ""
+			password = "root"
 			
             dbCreate = "update" // one of 'create', 'create-drop', 'update', 'validate', ''
             url = "jdbc:mysql://localhost:3306/intercambiamesta?autoReconnect=true"
