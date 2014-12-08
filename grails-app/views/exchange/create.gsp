@@ -19,25 +19,29 @@
 				</div>
 
 				<div class="panel-body">
-					<form action='${createLink(controller:'exchange',action:'save')}' class="form-horizontal" method='POST' autocomplete='off'>
-						<g:render template="form"/>
+					<div class="row">
+						<div class="col-md-8">
+							<form action='${createLink(controller:'exchange',action:'save')}' class="form-horizontal" method='POST' autocomplete='off'>
+								<g:render template="form"/>
 
-						<div class="form-group">
-							<div class="col-md-offset-2 col-md-6">
-								<g:if test="${flash.error}">
-									<div class="alert alert-danger" style="margin-left:0; margin-right:0">
-										<g:message error="${flash.error}"/>
+								<div class="form-group">
+									<div class="col-md-offset-4 col-md-8">
+										<g:if test="${flash.error}">
+											<div class="alert alert-danger" style="margin-left:0; margin-right:0">
+												<g:message error="${flash.error}"/>
+											</div>
+										</g:if>
 									</div>
-								</g:if>
-							</div>
-						</div>
+								</div>
 
-						<div class="form-group">
-							<div class="col-md-offset-2 col-md-6">
-								<button type="submit" class="btn btn-primary"><span class="fa flaticon-stocking1"></span> Crear intercambio</button>
-							</div>
+								<div class="form-group">
+									<div class="col-md-offset-4 col-md-8">
+										<button type="submit" class="btn btn-primary"><span class="fa flaticon-stocking1"></span> Crear intercambio</button>
+									</div>
+								</div>
+							</form>
 						</div>
-					</form>
+					</div>
 				</div>
 			</div>
 		</div>

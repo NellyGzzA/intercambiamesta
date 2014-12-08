@@ -33,18 +33,15 @@
 						<h3>Datos generales</h3>
 					</div>
 
-					<g:hasErrors bean="${exchangeInstance}">
-						<g:eachError bean="${exchangeInstance}" var="error">
-							<div class="alert alert-danger">
-								<g:message error="${error}"/>
-							</div>
-						</g:eachError>
-					</g:hasErrors>
-
-					<form action='${createLink(controller:'exchange',action:'update')}' method='POST' autocomplete='off'>
+					<form action='${createLink(controller:'exchange',action:'update')}' method='POST' autocomplete='off' class="form-horizontal" >
 						<g:render template="form"/>
 						<g:hiddenField name="id" value="${exchangeInstance?.id}"/>
-						<button type="submit" class="btn btn-primary">Submit</button>
+
+						<div class="form-group">
+							<div class="col-md-offset-4 col-md-8">
+								<button type="submit" class="btn btn-primary">Guardar</button>
+							</div>
+						</div>
 					</form>
 				</div>
 				<div class="col-md-6">
