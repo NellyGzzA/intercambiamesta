@@ -10,7 +10,7 @@ class UrlMappings {
 		"/exchange/$id/user/$secret"(controller: "exchange", action: "showOptions")
 		
 		"/register"(controller: "user", action: "register")
-        "/"(view:"/index")
+        "/"(controller:"home")
         "500"(view:'/error')
 	}
 }
