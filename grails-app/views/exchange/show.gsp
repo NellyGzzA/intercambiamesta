@@ -6,43 +6,42 @@
 		<asset:stylesheet src="datepicker.css"/>
 	</head>
 	<body>
-		<div class="container-fluid">
-			<div class="row">
-				
-				<div class="text-center">
-					<h1>${exchangeInstance?.name}</h1>
+		<div class="page">
+			<ol class="breadcrumb">
+				<li><a href="${createLink(uri: '/') }">Inicio</a></li>
+				<li><a href="${createLink(action: 'index', controller: 'exchange') }">Intercambios</a></li>
+				<li class="active">${exchangeInstance?.name}</li>
+			</ol>
+
+			<g:if test="${flash.error}">
+				<div class="alert alert-danger">
+					<g:message error="${flash.error}"/>
 				</div>
-				
-				<g:if test="${flash.error}">
-					<div class="alert alert-danger">
-						<g:message error="${flash.error}"/>
-					</div>
-				</g:if>
-				
-				<g:if test="${flash.message}">
-					<div class="alert alert-success">
-						${flash.message}
-					</div>
-				</g:if>
-				
+			</g:if>
+
+			<g:if test="${flash.message}">
+				<div class="alert alert-success">
+					${flash.message}
+				</div>
+			</g:if>
+
+			<div class="row">
+
 				<div class="col-md-3">
-					
+
 					<div class="page-header text-center">
 						<h3>Datos generales</h3>
 					</div>
-					
-					<g:hasErrors bean="${exchangeInstance}">
-						<g:eachError bean="${exchangeInstance}" var="error">
-							<div class="alert alert-danger">
-								<g:message error="${error}"/>
-							</div>
-						</g:eachError>
-					</g:hasErrors>
-					
-					<form action='${createLink(controller:'exchange',action:'update')}' method='POST' autocomplete='off'>
+
+					<form action='${createLink(controller:'exchange',action:'update')}' method='POST' autocomplete='off' class="form-horizontal" >
 						<g:render template="form"/>
 						<g:hiddenField name="id" value="${exchangeInstance?.id}"/>
-						<button type="submit" class="btn btn-primary">Submit</button>
+
+						<div class="form-group">
+							<div class="col-md-offset-4 col-md-8">
+								<button type="submit" class="btn btn-primary">Guardar</button>
+							</div>
+						</div>
 					</form>
 				</div>
 				<div class="col-md-6">
@@ -76,39 +75,40 @@
 					<div class="page-header text-center">
 						<h2><a class="spoilers">¡S P O I L E R S!</a></h2>
 					</div>
-					
+
 					<div class="spoilerTable hidden">
 						<table class="table table-hover table-striped">
 							<thead>
-								<tr>
-									<th></th>
-									<th>Nombre</th>
-									<th>Le regala a</th>
-									<th>Su primera opción</th>
-									<th>Su segunda opción</th>
-									<th>Su tercera opción</th>
-									<th>Comentarios</th>
-								</tr>
+							<tr>
+								<th></th>
+								<th>Nombre</th>
+								<th>Le regala a</th>
+								<th>Su primera opción</th>
+								<th>Su segunda opción</th>
+								<th>Su tercera opción</th>
+								<th>Comentarios</th>
+							</tr>
 							</thead>
 							<tbody>
-								<g:each in="${exchangeInstance?.users}" status="i" var="userInstance">
-									<tr>
-										<td><img height="50" alt="${userInstance?.userFrom?.fullname}" src="http://www.Gravatar.com/avatar/${userInstance?.userFrom?.username?.toLowerCase()?.encodeAsMD5()}" class="img-circle"></td>
-										<td>${userInstance?.userFrom?.fullname}</td>
-										<td>${userInstance?.userTo?.fullname}</td>
-										<td>${userInstance?.firstOption}</td>
-										<td>${userInstance?.secondOption}</td>
-										<td>${userInstance?.thirdOption}</td>
-										<td>${userInstance?.comments}</td>
-									</tr>
-									
-								</g:each>
+							<g:each in="${exchangeInstance?.users}" status="i" var="userInstance">
+								<tr>
+									<td><img height="50" alt="${userInstance?.userFrom?.fullname}" src="http://www.Gravatar.com/avatar/${userInstance?.userFrom?.username?.toLowerCase()?.encodeAsMD5()}" class="img-circle"></td>
+									<td>${userInstance?.userFrom?.fullname}</td>
+									<td>${userInstance?.userTo?.fullname}</td>
+									<td>${userInstance?.firstOption}</td>
+									<td>${userInstance?.secondOption}</td>
+									<td>${userInstance?.thirdOption}</td>
+									<td>${userInstance?.comments}</td>
+								</tr>
+
+							</g:each>
 							</tbody>
 						</table>
 					</div>
 				</div>
 			</g:if>
 		</div>
+
 		<asset:javascript src="datepicker.js"/>
 	</body>
 </html>

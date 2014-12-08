@@ -10,6 +10,11 @@
 		<title>Intercambiamesta<g:layoutTitle default=""/></title>
 	
 		<asset:stylesheet src="layout.css"/>
+
+		<link href='//fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
+		<asset:stylesheet src="font-awesome.min.css.css"/>
+		<asset:stylesheet src="flaticon.css"/>
+		<asset:stylesheet src="theme.css"/>
 	
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 		<!--[if lt IE 9]>
@@ -21,44 +26,64 @@
 	</head>
 
 	<body>
-		<!-- Fixed navbar -->
-		<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-			<div class="container">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<a class="navbar-brand" href="${createLink(uri:'/')}">Intercambiamesta</a>
+		<section id="header" class="top-header">
+			<header class="clearfix">
+				<!-- Logo -->
+				<div class="logo">
+					<a href="${createLink(uri:'/')}">
+						<asset:image src="logo.png" alt="Intercambiamesta" />
+					</a>
 				</div>
-				<div id="navbar" class="collapse navbar-collapse">
-					<ul class="nav navbar-nav">
-						<%-- <li class="active"><a href="#">Home</a></li> --%>
-						<sec:ifNotLoggedIn>
-							<li class="${controllerName == 'login' && actionName == 'auth' ? 'active':''}"><a href="${createLink(controller:'login', action:'auth')}">Acceso</a></li>
-							<li class="${controllerName == 'user' && actionName == 'register' ? 'active':''}"><a href="${createLink(controller:'user', action:'register')}">Registro</a></li>
-						</sec:ifNotLoggedIn>
-						<sec:ifLoggedIn>
-							<li class="${controllerName == 'exchange' ? 'active':''}"><a href="${createLink(action:'index',controller:'exchange') }">Intercambios</a></li>
-							<li><a href="${createLink(controller:'logout')}">Salir</a></li>
-						</sec:ifLoggedIn>
+
+				<sec:ifLoggedIn>
+					<div class="top-nav">
+						<ul class="nav-left list-unstyled">
+							<li class="dropdown text-normal nav-profile">
+								<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+
+									<img alt="${sec.loggedInUserInfo(field:'username')}"
+										 src="http://www.Gravatar.com/avatar/${sec.loggedInUserInfo(field:'username').toLowerCase()?.encodeAsMD5()}" class="img-circle img30_30">
+
+									<span class="hidden-xs">
+										<sec:loggedInUserInfo field="username"/>
+									</span>
+								</a>
+
+								<ul class="dropdown-menu dropdown-dark with-arrow">
+									<li>
+										<a href="${createLink(controller:'logout')}">
+											<i class="fa fa-sign-out"></i>
+											Salir
+										</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</sec:ifLoggedIn>
+			</header>
+		</section>
+
+		<aside id="nav-container">
+			<sec:ifLoggedIn>
+				<div id="nav-wrapper" data-nice-scroll>
+					<ul id="nav"
+						data-collapse-nav>
+						<li class="${!controllerName ? 'active': ''}"><a href="${createLink(uri: '/') }">
+							<i class="fa fa-home"></i>Inicio </a></li>
+
+						<li class="${controllerName.equals('exchange') ? 'active': ''}"><a href="${createLink(action:'index',controller:'exchange') }">
+							<i class="fa fa-gift"></i>Intercambios </a></li>
 					</ul>
-				</div><!--/.nav-collapse -->
-			</div>
-		</nav>
+				</div>
+			</sec:ifLoggedIn>
+		</aside>
 
-		<!-- Begin page content -->
-		<div class="container">
-			<g:layoutBody/>
+		<div class="view-container">
+			<section id="content">
+				<g:layoutBody/>
+			</section>
 		</div>
-
-		<footer class="footer">
-			<div class="container">
-				<p class="text-muted">Intercambiamesta 2014</p>
-			</div>
-		</footer>
 
 		<asset:javascript src="layout.js"/>
 	</body>

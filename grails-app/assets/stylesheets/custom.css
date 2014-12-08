@@ -37,3 +37,11 @@ body > .container {
 code {
   font-size: 80%;
 }
+
+form .alert {
+  margin-left:-15px; margin-right:-15px;
+}
+
+.panel-top.bg-success {
+  background-image: url("../images/Ice.png");
+}
