@@ -13,6 +13,26 @@
 			top: 0;
 			left: 0;
 		}
+
+		.page-signin .signin-header {
+			background: #a72f38 url("${resource(dir: 'images', file: 'banner2.jpg')}") center center no-repeat!important;
+			height:180px;
+		}
+
+		.page-signin .signin-header:after {
+			content: " ";
+			background: url(${resource(dir: 'images', file: 'tiranisu.png')}) top left no-repeat;
+			position:absolute;
+			bottom:0;
+			left:10%;
+			display:block;
+			width:414px;
+			height:180px;
+		}
+
+		.page-signin .signin-header .overlay {
+			opacity:0.5;
+		}
 		</style>
 	</head>
 	<body>
@@ -22,11 +42,12 @@
 			<div class="overlay"></div>
 
 			<div class="container text-center">
-				<section class="logo">
-					<asset:image src="logo-big.png" alt="Intercambiamesta" />
+				<section class="logo" style="margin-bottom: 10px;">
+					<a href="${createLink(uri: '/')}"><asset:image src="logo-big.png" alt="Intercambiamesta" /></a>
 				</section>
 
-				<p class="lead">El tradicional intercambio navideño en Vinco Orbis</p>
+				<p class="lead" style="margin-bottom: 0"><strong>¡Feliz navidad!</strong> y nuestros mejores deseos</p>
+				<p>Gracias por ser parte de la familia Vinco Orbis</p>
 			</div>
 		</div>
 
@@ -37,7 +58,7 @@
 
 					<form action='${createLink(controller:'user', action:'save')}' method='POST' autocomplete='off' class='form-horizontal'>
 						<fieldset>
-							<div class="form-group">
+							<div class="form-group ${hasErrors(bean: userInstance, field: 'fullname', 'has-error')}">
 								<div class="input-group input-group-lg">
 									<span class="input-group-addon">
 										<span class="fa flaticon-santaclaus"></span>
@@ -49,8 +70,14 @@
 										   name="fullname" required maxlength="100">
 
 								</div>
+
+								<g:hasErrors bean="${userInstance}" field="fullname">
+									<g:eachError bean="${userInstance}" field="fullname" var="error">
+										<p class="help-block"><g:message error="${error}"/></p>
+									</g:eachError>
+								</g:hasErrors>
 							</div>
-							<div class="form-group">
+							<div class="form-group ${hasErrors(bean: userInstance, field: 'username', 'has-error')}">
 								<div class="input-group input-group-lg">
 									<span class="input-group-addon">
 										<span class="glyphicon flaticon-sign16"></span>
@@ -62,8 +89,14 @@
 										   name="username" required maxlength="100">
 
 								</div>
+
+								<g:hasErrors bean="${userInstance}" field="username">
+									<g:eachError bean="${userInstance}" field="username" var="error">
+										<p class="help-block"><g:message error="${error}"/></p>
+									</g:eachError>
+								</g:hasErrors>
 							</div>
-							<div class="form-group">
+							<div class="form-group ${hasErrors(bean: userInstance, field: 'password', 'has-error')}">
 								<div class="input-group input-group-lg">
 									<span class="input-group-addon">
 										<span class="glyphicon glyphicon-lock"></span>
@@ -74,20 +107,18 @@
 										   value="${userInstance?.password}"
 										   name="password" required>
 								</div>
+
+								<g:hasErrors bean="${userInstance}" field="password">
+									<g:eachError bean="${userInstance}" field="password" var="error">
+										<p class="help-block"><g:message error="${error}"/></p>
+									</g:eachError>
+								</g:hasErrors>
 							</div>
 							<g:if test="${flash.error}">
 								<div class="alert alert-danger">
 									<g:message error="${flash.error}"/>
 								</div>
 							</g:if>
-
-							<g:hasErrors bean="${userInstance}">
-								<g:eachError bean="${userInstance}" var="error">
-									<div class="alert alert-danger">
-										<g:message error="${error}"/>
-									</div>
-								</g:eachError>
-							</g:hasErrors>
 							<div class="form-group">
 							</div>
 							<div class="form-group">
