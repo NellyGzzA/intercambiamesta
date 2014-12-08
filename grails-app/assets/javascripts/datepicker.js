@@ -1,7 +1,6 @@
 //= require jquery
 //= require moment.min.js
 //= require es.js
-//= require bootstrap
 //= require bootstrap-datetimepicker.min.js
 
 $('#datetimepicker').datetimepicker({
@@ -10,7 +9,7 @@ $('#datetimepicker').datetimepicker({
 
 $(document).on('submit','#addNewUser', function(e){
 	e.preventDefault();
-	
+
 	$('#btn-addNewUser').addClass('disabled');
 	$("#spinner").attr("class", "");
 	jQuery.ajax({

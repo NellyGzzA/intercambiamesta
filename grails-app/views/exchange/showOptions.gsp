@@ -60,8 +60,14 @@
 
 					<fieldset>
 						<div class="form-group ${hasErrors(bean: userExchange, field: 'firstOption', 'has-error')}">
-							<label for="name">Primera opción</label>
-							<input type="text" class="form-control" id="firstOption" placeholder="Primera opción" name="firstOption" required maxlength="100" value="${userExchange?.firstOption}">
+
+							<div class="input-group input-group-lg">
+								<span class="input-group-addon">
+									<span class="glyphicon flaticon-present20"></span>
+								</span>
+
+								<input type="text" class="form-control" id="firstOption" placeholder="Primera opción" name="firstOption" required maxlength="100" value="${userExchange?.firstOption}">
+							</div>
 
 							<g:hasErrors bean="${exchangeInstance}" field="firstOption">
 								<g:eachError bean="${exchangeInstance}" field="firstOption" var="error">
@@ -71,8 +77,13 @@
 						</div>
 
 						<div class="form-group ${hasErrors(bean: userExchange, field: 'secondOption', 'has-error')}">
-							<label for="name">Segunda opción</label>
-							<input type="text" class="form-control" id="secondOption" placeholder="Segunda opción" name="secondOption" maxlength="100" value="${userExchange?.secondOption}">
+							<div class="input-group input-group-lg">
+								<span class="input-group-addon">
+									<span class="glyphicon flaticon-rocking3"></span>
+								</span>
+
+								<input type="text" class="form-control" id="secondOption" placeholder="Segunda opción" name="secondOption" maxlength="100" value="${userExchange?.secondOption}">
+							</div>
 
 							<g:hasErrors bean="${exchangeInstance}" field="secondOption">
 								<g:eachError bean="${exchangeInstance}" field="secondOption" var="error">
@@ -82,8 +93,14 @@
 						</div>
 
 						<div class="form-group ${hasErrors(bean: userExchange, field: 'thirdOption', 'has-error')}">
-							<label for="name">Tercera opción</label>
-							<input type="text" class="form-control" id="thirdOption" placeholder="Tercera opción" name="thirdOption" maxlength="100" value="${userExchange?.thirdOption}">
+
+							<div class="input-group input-group-lg">
+								<span class="input-group-addon">
+									<span class="glyphicon flaticon-teddy"></span>
+								</span>
+
+								<input type="text" class="form-control" id="thirdOption" placeholder="Tercera opción" name="thirdOption" maxlength="100" value="${userExchange?.thirdOption}">
+							</div>
 
 							<g:hasErrors bean="${exchangeInstance}" field="thirdOption">
 								<g:eachError bean="${exchangeInstance}" field="thirdOption" var="error">
@@ -93,8 +110,7 @@
 						</div>
 
 						<div class="form-group ${hasErrors(bean: userExchange, field: 'comments', 'has-error')}">
-							<label for="name">Comentarios</label>
-							<textarea rows="4" cols="40" class="form-control" id="comments" placeholder="Comentarios" name="comments" maxlength="1000" >${userExchange?.comments}</textarea>
+							<textarea rows="4" cols="40" class="form-control input-lg" id="comments" placeholder="Comentarios" name="comments" maxlength="1000" >${userExchange?.comments}</textarea>
 
 							<g:hasErrors bean="${exchangeInstance}" field="comments">
 								<g:eachError bean="${exchangeInstance}" field="comments" var="error">
