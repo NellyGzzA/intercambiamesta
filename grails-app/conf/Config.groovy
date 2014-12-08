@@ -93,6 +93,9 @@ environments {
 			apiKey = ""
 		}
     }
+	production{
+		grails.config.locations = ["file:/.grails/${appName}/Config.groovy"]
+	}
 }
 
 // log4j configuration
