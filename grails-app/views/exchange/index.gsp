@@ -47,7 +47,7 @@
 
 				</div>
 			</g:if>
-
+<%-- 
 			<g:if test="${pastExchanges}">
 				<div class="page-header">
 					<h2>Intercambios pasados</h2>
@@ -72,6 +72,7 @@
 					</div>
 				</div>
 			</g:if>
+--%>
 		</div>
 	</body>
 </html>
