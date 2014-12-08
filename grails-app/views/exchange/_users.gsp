@@ -1,7 +1,7 @@
-<g:unless test="${exchangeInstance?.users?.any{it?.userFrom?.username == "rv@manoderecha.mx"}}">
+<g:unless test="${exchangeInstance?.users?.any{it?.userFrom?.username == sec.username().toString()}}">
 	<div class="row">
 		<div class="text-right">
-			<button type="button" class="btn btn-success btn-xs" id="addMe" data-id="${exchangeInstance?.id}">¡Agregame!</button>
+			<button type="button" class="btn btn-success btn-xs" id="addMe" data-id="${exchangeInstance?.id}">¡Agrégame!</button>
 		</div>
 		<hr>
 	</div>
