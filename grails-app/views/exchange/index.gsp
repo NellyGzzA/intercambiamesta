@@ -23,7 +23,7 @@
 
 			<g:if test="${actualExchanges}">
 				<div class="page-header">
-					<h2><span class="fa flaticon-sparkler"></span> Intercambios activos</h2>
+					<h2>Intercambios activos</h2>
 				</div>
 				<div class="container-fluid">
 
