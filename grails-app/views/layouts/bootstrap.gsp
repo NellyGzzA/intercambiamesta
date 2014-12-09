@@ -74,6 +74,9 @@
 
 						<li class="${controllerName.equals('exchange') ? 'active': ''}"><a href="${createLink(action:'index',controller:'exchange') }">
 							<i class="fa fa-gift"></i>Intercambios </a></li>
+
+						<li class="${controllerName.equals('help') ? 'active': ''}"><a href="${createLink(action: 'index', controller: 'help')}">
+							<i class="fa fa-question-circle"></i> Ayuda</a> </li>
 					</ul>
 				</div>
 			</sec:ifLoggedIn>
