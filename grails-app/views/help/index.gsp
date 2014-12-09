@@ -50,9 +50,6 @@
     <h1>Envía recordatorios <span class="fa fa-envelope pull-right fa-2x"></span></h1>
     <div>
       <p>Cuando la fecha del intercambio se acerque, envía un recordatorio al usuario haciendo click en el botón de la barra lateral <em>Enviar recordatorios</em></p>
-
-      <p>Si eliminas un usuario de la lista de participantes, o simplemente no te gustó como quedaron las asignaciones, puedes utilizar el botón de la barra lateral
-      <em>Forzar asignación</em> y los participantes serán reasignados.</p>
     </div>
   </div>
 </div>
