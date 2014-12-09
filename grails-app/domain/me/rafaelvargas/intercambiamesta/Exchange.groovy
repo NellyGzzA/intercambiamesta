@@ -15,14 +15,18 @@ class Exchange {
 	Date lastUpdated
 	Integer limitAmount
 	
-	static transients = ['users']
+	static transients = ['users','editable']
 	
 	static constraints = {
 		name blank: false, maxSize: 100
-		name blank: false, maxSize: 100
+		theme blank: false, maxSize: 100
 		endDate validator: { val, obj -> if(val < ((obj?.dateCreated?.clone()?:new Date())+1).clearTime()) ['min.notmet', val, val] }
 		limitAmount min:0
 	}
 	
 	List getUsers() { UserExchange.findAllByExchange(this) }
+	
+	Boolean isEditable() {
+		endDate >= new Date().clearTime()
+	}
 }
