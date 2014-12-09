@@ -1,5 +1,6 @@
 //= require jquery
 //= require snowfall.jquery.js
+//= require jquery.steps.min.js
 //= require bootstrap
 
 
@@ -15,5 +16,16 @@ jQuery(function ($) {
 
     $(window).on('resize', function () {
         $('a.registration').popover('show');
+    });
+
+    $('.ui-wizard-form').steps({
+        labels: {
+            next: 'Siguiente',
+            previous: 'Anterior',
+            finish: 'Finalizar'
+        },
+        onFinished: function () {
+            window.location.href = '/';
+        }
     });
 });

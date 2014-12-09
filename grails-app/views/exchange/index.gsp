@@ -3,6 +3,13 @@
 	<head>
 		<title>: Listado de intercambios</title>
 		<meta name="layout" content="bootstrap">
+
+		<style>
+			.fa-big:before {
+				font-size:80px !important;
+				opacity:0.4;
+			}
+		</style>
 	</head>
 	<body>
 		<div class="page">
@@ -47,6 +54,17 @@
 
 				</div>
 			</g:if>
+			<g:else>
+				<div class="row" style="margin-top: 20px;">
+					<div class="col-md-8 col-md-offset-2">
+						<div class="well">
+							<p class="text-center"><span class="fa flaticon-bell50 fa-big" </p>
+							<p class="text-center">Antes de empezar, te invitamos seguir el tutorial en la sección de <a href="${createLink(controller: 'help', action: 'index')}">Ayuda</a>,
+							te dará la información necesaria para administrar tus intercambios.</p>
+						</div>
+					</div>
+				</div>
+			</g:else>
 <%-- 
 			<g:if test="${pastExchanges}">
 				<div class="page-header">
