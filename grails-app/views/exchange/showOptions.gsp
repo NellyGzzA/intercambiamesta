@@ -55,7 +55,19 @@
 		<div class="container">
 			<div class="form-container">
 				<span class="line-thru">MIS PREFERENCIAS</span>
+				
+				<g:if test="${flash.error}">
+					<div class="alert alert-danger">
+						<g:message error="${flash.error}"/>
+					</div>
+				</g:if>
 
+				<g:if test="${flash.message}">
+					<div class="alert alert-success">
+						<g:message error="${flash.message}"/>
+					</div>
+				</g:if>
+				
 				<form action='${createLink(controller:'exchange',action:'updateOptions')}' method='POST' autocomplete='off' class='form-horizontal'>
 
 					<fieldset>
@@ -68,12 +80,6 @@
 
 								<input type="text" class="form-control" id="firstOption" placeholder="Primera opción" name="firstOption" required maxlength="100" value="${userExchange?.firstOption}">
 							</div>
-
-							<g:hasErrors bean="${exchangeInstance}" field="firstOption">
-								<g:eachError bean="${exchangeInstance}" field="firstOption" var="error">
-									<p class="help-block"><g:message error="${error}"/></p>
-								</g:eachError>
-							</g:hasErrors>
 						</div>
 
 						<div class="form-group ${hasErrors(bean: userExchange, field: 'secondOption', 'has-error')}">
@@ -84,12 +90,6 @@
 
 								<input type="text" class="form-control" id="secondOption" placeholder="Segunda opción" name="secondOption" maxlength="100" value="${userExchange?.secondOption}">
 							</div>
-
-							<g:hasErrors bean="${exchangeInstance}" field="secondOption">
-								<g:eachError bean="${exchangeInstance}" field="secondOption" var="error">
-									<p class="help-block"><g:message error="${error}"/></p>
-								</g:eachError>
-							</g:hasErrors>
 						</div>
 
 						<div class="form-group ${hasErrors(bean: userExchange, field: 'thirdOption', 'has-error')}">
@@ -101,35 +101,11 @@
 
 								<input type="text" class="form-control" id="thirdOption" placeholder="Tercera opción" name="thirdOption" maxlength="100" value="${userExchange?.thirdOption}">
 							</div>
-
-							<g:hasErrors bean="${exchangeInstance}" field="thirdOption">
-								<g:eachError bean="${exchangeInstance}" field="thirdOption" var="error">
-									<p class="help-block"><g:message error="${error}"/></p>
-								</g:eachError>
-							</g:hasErrors>
 						</div>
 
 						<div class="form-group ${hasErrors(bean: userExchange, field: 'comments', 'has-error')}">
 							<textarea rows="4" cols="40" class="form-control input-lg" id="comments" placeholder="Comentarios" name="comments" maxlength="1000" >${userExchange?.comments}</textarea>
-
-							<g:hasErrors bean="${exchangeInstance}" field="comments">
-								<g:eachError bean="${exchangeInstance}" field="comments" var="error">
-									<p class="help-block"><g:message error="${error}"/></p>
-								</g:eachError>
-							</g:hasErrors>
 						</div>
-
-						<g:if test="${flash.error}">
-							<div class="alert alert-danger">
-								<g:message error="${flash.error}"/>
-							</div>
-						</g:if>
-
-						<g:if test="${flash.message}">
-							<div class="alert alert-success">
-								<g:message error="${flash.message}"/>
-							</div>
-						</g:if>
 
 						<g:hiddenField name="id" value="${exchangeInstance.id}"/>
 						<g:hiddenField name="secret" value="${userExchange.secret}"/>
