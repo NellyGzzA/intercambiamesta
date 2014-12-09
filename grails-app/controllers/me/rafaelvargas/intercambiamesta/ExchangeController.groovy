@@ -147,29 +147,6 @@ class ExchangeController {
 		redirect action:'show',id:exchangeInstance.id
 	}
 	
-	def forceGenerate() {
-		User userInstance = springSecurityService.currentUser
-		Exchange exchangeInstance = Exchange.findByUserAndId(userInstance,params.id)
-		
-		if(!exchangeInstance) {
-			render ""
-			return
-		}
-		
-		List results = exchangeInstance.users
-		
-		if(results.size() < 3) {
-			flash.error = "Se requieren al menos 3 usuarios para la asignación."
-			redirect action:'show',id:exchangeInstance.id
-			return
-		}
-		
-		exchangeService.generate(results, exchangeInstance)
-		
-		flash.message = "Asignación completa"
-		redirect action:'show',id:exchangeInstance.id
-	}
-	
 	def sendMails() {
 		User userInstance = springSecurityService.currentUser
 		Exchange exchangeInstance = Exchange.findByUserAndId(userInstance,params.id)

@@ -61,10 +61,6 @@
 						Se requieren al menos tres usuarios para poder crear la asignación.
 					</div>
 					<div class="well">
-						<p class="text-center"><a href="${createLink(controller:'exchange',action:'forceGenerate', id:exchangeInstance?.id) }" class="btn btn-primary ">Forzar asignación</a></p>
-						Se resetea la asignación actual y se asignan los puestos de nuevo.
-					</div>
-					<div class="well">
 						<p class="text-center"><a href="${createLink(controller:'exchange',action:'sendMails', id:exchangeInstance?.id) }" class="btn btn-primary ">Enviar recordatorios</a></p>
 						Manda el correo de detalle del intercambio, que incluye la persona a la que se le va a dar el regalo y la liga para escoger opciones.
 					</div>
