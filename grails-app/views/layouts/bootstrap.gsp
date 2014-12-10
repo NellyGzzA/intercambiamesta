@@ -6,7 +6,11 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="description" content="">
 		<meta name="author" content="">
-
+		
+		<meta property="og:image" content="http://i.imgur.com/WC1Ut8H.png">
+		<meta property="og:title" content="Intercambiamesta">
+		<meta property="og:url" content="http://intercambiamesta.com/">
+		
 		<title>Intercambiamesta<g:layoutTitle default=""/></title>
 	
 		<asset:stylesheet src="layout.css"/>
