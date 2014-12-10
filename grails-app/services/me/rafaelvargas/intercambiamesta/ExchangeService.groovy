@@ -68,10 +68,10 @@ class ExchangeService {
 		User userFrom = UserExchange.findByUserToAndExchange(userExchange.userFrom, exchangeInstance).userFrom
 		List recipients = [ new MandrillRecipient(name:userFrom.fullname, email:userFrom.username) ]
 		List mergeVars = [ new RecipientVars(rcpt:userFrom.username, vars:[ 
-																						new MergeVar(name:"FIRST", content:userExchange.firstOption),
-																						new MergeVar(name:"SECOND", content:userExchange.secondOption),
-																						new MergeVar(name:"THIRD", content:userExchange.thirdOption),
-																						new MergeVar(name:"COMMENTS", content:userExchange.comments),
+																						new MergeVar(name:"FIRST", content:userExchange.firstOption?:"&nbsp;"),
+																						new MergeVar(name:"SECOND", content:userExchange.secondOption?:"&nbsp;"),
+																						new MergeVar(name:"THIRD", content:userExchange.thirdOption?:"&nbsp;"),
+																						new MergeVar(name:"COMMENTS", content:userExchange.comments?:"&nbsp;"),
 																						new MergeVar(name:"EXCHANGE", content:exchangeInstance.name),
 																						new MergeVar(name:"USERTO", content:userExchange.userFrom.fullname)]) ]
 		MandrillMessage message = new MandrillMessage(to:recipients, merge_vars:mergeVars, subject:"Peticiones del intercambio '${exchangeInstance.name}'" )
