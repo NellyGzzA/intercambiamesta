@@ -12,7 +12,7 @@
 		<asset:stylesheet src="layout.css"/>
 
 		<link href='//fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
-		<asset:stylesheet src="font-awesome.min.css.css"/>
+		<asset:stylesheet src="font-awesome.min.css"/>
 		<asset:stylesheet src="flaticon.css"/>
 		<asset:stylesheet src="theme.css"/>
 	
