@@ -87,7 +87,11 @@
 				<div class="container">
 					<div class="form-container">
 						<span class="line-thru">ACCESO</span>
-
+						
+						<g:if test='${flash.message}'>
+							<div class="alert alert-danger" role="alert">${flash.message}</div>
+						</g:if>
+						
 						<form action='${postUrl}' method='POST' id='loginForm' class='form-horizontal' autocomplete='off'>
 							<fieldset>
 								<div class="form-group">
@@ -113,9 +117,6 @@
 											   name="j_password" required>
 									</div>
 								</div>
-								<g:if test='${flash.message}'>
-									<div class="alert alert-danger" role="alert">${flash.message}</div>
-								</g:if>
 								<div class="form-group">
 								</div>
 								<div class="form-group">
