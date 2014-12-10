@@ -1,6 +1,7 @@
 //= require jquery
 //= require snowfall.jquery.js
 //= require jquery.steps.min.js
+//= require analytics.js
 //= require bootstrap
 
 
