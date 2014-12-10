@@ -24,7 +24,7 @@ class ExchangeController {
 		User userInstance = springSecurityService.currentUser
 		Exchange exchangeInstance = Exchange.findByUserAndId(userInstance,params.id)
 		
-		if(!exchangeInstance) {
+		if(!exchangeInstance || !exchangeInstance.isEditable()) {
 			flash.error = "Intercambio no encontrado"
 			redirect action:'index'
 		}
@@ -55,7 +55,8 @@ class ExchangeController {
 	def update() {
 		User userInstance = springSecurityService.currentUser
 		Exchange exchangeInstance = Exchange.findByUserAndId(userInstance,params.id)
-		if(!exchangeInstance) {
+		
+		if(!exchangeInstance || !exchangeInstance.isEditable()) {
 			flash.error = "Intercambio no encontrado"
 			redirect action:'index'
 		}
@@ -76,10 +77,12 @@ class ExchangeController {
 	def addMe() {
 		User userInstance = springSecurityService.currentUser
 		Exchange exchangeInstance = Exchange.findByUserAndId(userInstance,params.id)
-		if(!exchangeInstance) {
+		
+		if(!exchangeInstance || !exchangeInstance.isEditable()) {
 			render ""
 			return
 		}
+		
 		exchangeService.addUser(userInstance,exchangeInstance)
 		render template:'users', model:['exchangeInstance':exchangeInstance]
 	}
@@ -90,7 +93,7 @@ class ExchangeController {
 		Exchange exchangeInstance = Exchange.findByUserAndId(userInstance,params.id)
 		User anotherUser = User.findByUsername(params.username)
 		
-		if(!exchangeInstance || !anotherUser) {
+		if(!exchangeInstance || !exchangeInstance.isEditable() || !anotherUser) {
 			render ""
 			return
 		}
@@ -103,7 +106,7 @@ class ExchangeController {
 		User userInstance = springSecurityService.currentUser
 		Exchange exchangeInstance = Exchange.findByUserAndId(userInstance,params.id)
 		
-		if(!exchangeInstance) {
+		if(!exchangeInstance || !exchangeInstance.isEditable()) {
 			render ""
 			return
 		}
@@ -128,7 +131,7 @@ class ExchangeController {
 		User userInstance = springSecurityService.currentUser
 		Exchange exchangeInstance = Exchange.findByUserAndId(userInstance,params.id)
 		
-		if(!exchangeInstance) {
+		if(!exchangeInstance || !exchangeInstance.isEditable()) {
 			render ""
 			return
 		}
@@ -147,34 +150,11 @@ class ExchangeController {
 		redirect action:'show',id:exchangeInstance.id
 	}
 	
-	def forceGenerate() {
-		User userInstance = springSecurityService.currentUser
-		Exchange exchangeInstance = Exchange.findByUserAndId(userInstance,params.id)
-		
-		if(!exchangeInstance) {
-			render ""
-			return
-		}
-		
-		List results = exchangeInstance.users
-		
-		if(results.size() < 3) {
-			flash.error = "Se requieren al menos 3 usuarios para la asignación."
-			redirect action:'show',id:exchangeInstance.id
-			return
-		}
-		
-		exchangeService.generate(results, exchangeInstance)
-		
-		flash.message = "Asignación completa"
-		redirect action:'show',id:exchangeInstance.id
-	}
-	
 	def sendMails() {
 		User userInstance = springSecurityService.currentUser
 		Exchange exchangeInstance = Exchange.findByUserAndId(userInstance,params.id)
 		
-		if(!exchangeInstance) {
+		if(!exchangeInstance || !exchangeInstance.isEditable()) {
 			render ""
 			return
 		}
@@ -190,7 +170,7 @@ class ExchangeController {
 		Exchange exchangeInstance = Exchange.get(params.id)
 		UserExchange userExchange = UserExchange.findByExchangeAndSecret(exchangeInstance,params.secret)
 		
-		if(!userExchange) {
+		if(!userExchange || !exchangeInstance.isEditable()) {
 			redirect uri:'/'
 			return
 		}
@@ -203,7 +183,7 @@ class ExchangeController {
 		Exchange exchangeInstance = Exchange.get(params.id)
 		UserExchange userExchange = UserExchange.findByExchangeAndSecret(exchangeInstance,params.secret)
 		
-		if(!userExchange) {
+		if(!userExchange || !exchangeInstance.isEditable()) {
 			redirect uri:'/'
 			return
 		}
@@ -212,7 +192,6 @@ class ExchangeController {
 		
 		if(!userExchange.validate()) {
 			flash.error = "Verifica tus respuestas"
-			return
 		}
 		else {
 			flash.message = "Opciones guardadas"

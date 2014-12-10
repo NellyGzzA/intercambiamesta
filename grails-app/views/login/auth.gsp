@@ -33,6 +33,38 @@
 			.page-signin .signin-header .overlay {
 				opacity:0.5;
 			}
+
+			.popover {
+				background-color:#7BBD82;
+				border-color: #76b37c;
+				text-align:center;
+				color:white;
+				font-size:12px;
+				width:150px;
+			}
+
+			.popover-content:before {
+				content: "\e03a";
+				font-family: Flaticon;
+				font-style: normal;
+				font-size:40px;
+				display: block;
+				margin:0 auto;
+				line-height:35px;
+				margin-bottom:5px;
+			}
+
+			.popover-content strong {
+				font-size:13px;
+			}
+
+			.popover.bottom > .arrow {
+				border-bottom-color:#76b37c;
+			}
+
+			.popover.bottom > .arrow:after {
+				border-bottom-color:#7BBD82;
+			}
 		</style>
 	</head>
 	<body>
@@ -55,7 +87,11 @@
 				<div class="container">
 					<div class="form-container">
 						<span class="line-thru">ACCESO</span>
-
+						
+						<g:if test='${flash.message}'>
+							<div class="alert alert-danger" role="alert">${flash.message}</div>
+						</g:if>
+						
 						<form action='${postUrl}' method='POST' id='loginForm' class='form-horizontal' autocomplete='off'>
 							<fieldset>
 								<div class="form-group">
@@ -81,9 +117,6 @@
 											   name="j_password" required>
 									</div>
 								</div>
-								<g:if test='${flash.message}'>
-									<div class="alert alert-danger" role="alert">${flash.message}</div>
-								</g:if>
 								<div class="form-group">
 								</div>
 								<div class="form-group">
@@ -94,7 +127,8 @@
 
 						<section>
 							<p class="text-center text-muted text-small">¿No tienes cuenta?
-								<a href="${createLink(controller:'user', action:'register')}">Regístrate</a></p>
+								<a href="${createLink(controller:'user', action:'register')}"
+								   class="registration" data-placement="bottom">Regístrate</a></p>
 						</section>
 
 					</div>
