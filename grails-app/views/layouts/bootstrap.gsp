@@ -7,9 +7,8 @@
 		<meta name="description" content="">
 		<meta name="author" content="">
 		
-		<meta property="og:image" content="http://i.imgur.com/WC1Ut8H.png">
+		<meta property="og:image" content="http://i.imgur.com/C91cjNn.png">
 		<meta property="og:title" content="Intercambiamesta">
-		<meta property="og:url" content="http://intercambiamesta.com/">
 		
 		<title>Intercambiamesta<g:layoutTitle default=""/></title>
 	
