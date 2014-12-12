@@ -3,37 +3,7 @@
 <head>
 	<title>: Mis preferencias</title>
 	<meta name="layout" content="bootstrap">
-
-	<style>
-	aside, #header {
-		display: none !important;
-	}
-
-	#content {
-		top: 0;
-		left: 0;
-	}
-
-	.page-signin .signin-header {
-		background: #a72f38 url("${resource(dir: 'images', file: 'banner2.jpg')}") center center no-repeat!important;
-		height:180px;
-	}
-
-	.page-signin .signin-header:after {
-		content: " ";
-		background: url(${resource(dir: 'images', file: 'tiranisu.png')}) top left no-repeat;
-		position:absolute;
-		bottom:0;
-		left:10%;
-		display:block;
-		width:414px;
-		height:180px;
-	}
-
-	.page-signin .signin-header .overlay {
-		opacity:0.5;
-	}
-	</style>
+	<asset:stylesheet src="options"/>
 </head>
 <body>
 <div class="page-signin">
@@ -47,7 +17,7 @@
 			</section>
 
 			<p class="lead" style="margin-bottom: 0"><strong>¡Feliz navidad!</strong> y nuestros mejores deseos</p>
-			<p>Gracias por ser parte de la familia Vinco Orbis</p>
+			<p>Gracias por ser parte de la familia <a href="http://vincoorbis.com/#!/" class="a-brand">Vinco Orbis</a></p>
 		</div>
 	</div>
 
