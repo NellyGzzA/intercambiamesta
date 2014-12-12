@@ -3,69 +3,7 @@
 	<head>
 		<title>: Acceso</title>
 		<meta name="layout" content="bootstrap">
-
-		<style>
-			aside, #header {
-				display: none !important;
-			}
-
-			#content {
-				top: 0;
-				left: 0;
-			 }
-
-			.page-signin .signin-header {
-				background: #a72f38 url("${resource(dir: 'images', file: 'banner2.jpg')}") center center no-repeat!important;
-				height:180px;
-			}
-
-			.page-signin .signin-header:after {
-				content: " ";
-				background: url(${resource(dir: 'images', file: 'tiranisu.png')}) top left no-repeat;
-				position:absolute;
-				bottom:0;
-				left:10%;
-				display:block;
-				width:414px;
-				height:180px;
-			}
-
-			.page-signin .signin-header .overlay {
-				opacity:0.5;
-			}
-
-			.popover {
-				background-color:#7BBD82;
-				border-color: #76b37c;
-				text-align:center;
-				color:white;
-				font-size:12px;
-				width:150px;
-			}
-
-			.popover-content:before {
-				content: "\e03a";
-				font-family: Flaticon;
-				font-style: normal;
-				font-size:40px;
-				display: block;
-				margin:0 auto;
-				line-height:35px;
-				margin-bottom:5px;
-			}
-
-			.popover-content strong {
-				font-size:13px;
-			}
-
-			.popover.bottom > .arrow {
-				border-bottom-color:#76b37c;
-			}
-
-			.popover.bottom > .arrow:after {
-				border-bottom-color:#7BBD82;
-			}
-		</style>
+		<asset:stylesheet src="login.css"/>
 	</head>
 	<body>
 		<div class="page-signin">
@@ -79,7 +17,7 @@
 					</section>
 
 					<p class="lead" style="margin-bottom: 0"><strong>¡Feliz navidad!</strong> y nuestros mejores deseos</p>
-					<p>Gracias por ser parte de la familia Vinco Orbis</p>
+					<p>Gracias por ser parte de la familia <a href="http://vincoorbis.com/#!/" class="a-brand">Vinco Orbis</a></p>
 				</div>
 			</div>
 

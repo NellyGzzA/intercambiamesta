@@ -80,6 +80,9 @@
 
 						<li class="${controllerName.equals('help') ? 'active': ''}"><a href="${createLink(action: 'index', controller: 'help')}">
 							<i class="fa fa-question-circle"></i> Ayuda</a> </li>
+						
+						<li class="${controllerName.equals('contact') ? 'active': ''}"><a href="${createLink(action: 'index', controller: 'contact')}">
+							<i class="fa fa-envelope"></i> Contacto</a> </li>
 					</ul>
 				</div>
 			</sec:ifLoggedIn>
