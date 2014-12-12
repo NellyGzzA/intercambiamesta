@@ -92,6 +92,7 @@ environments {
 		mandrill {
 			apiKey = ""
 		}
+		contactmail.admin = "rv@manoderecha.mx"
     }
 	production{
 		grails.config.locations = ["file:/.grails/${appName}/Config.groovy"]
