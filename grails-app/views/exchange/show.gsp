@@ -58,7 +58,7 @@
 					</div>
 					<div class="well">
 						<p class="text-center"><a href="${createLink(controller:'exchange',action:'generate', id:exchangeInstance?.id) }" class="btn btn-primary ">Asignar usuarios</a></p>
-						Se requieren al menos tres usuarios para poder crear la asignación.
+						Se requieren al menos dos usuarios para poder crear la asignación.
 					</div>
 					<div class="well">
 						<p class="text-center"><a href="${createLink(controller:'exchange',action:'sendMails', id:exchangeInstance?.id) }" class="btn btn-primary ">Enviar recordatorios</a></p>
