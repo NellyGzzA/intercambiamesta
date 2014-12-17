@@ -138,8 +138,8 @@ class ExchangeController {
 		
 		List results = UserExchange.findAllByExchangeAndUserToIsNull(exchangeInstance)
 		
-		if(results.size() < 3) {
-			flash.error = "Se requieren al menos 3 usuarios libres para la asignación."
+		if(results.size() < 2) {
+			flash.error = "Se requieren al menos 2 usuarios libres para la asignación."
 			redirect action:'show',id:exchangeInstance.id
 			return
 		}
