@@ -1,6 +1,4 @@
 
-$login-popover-bg: #122F57;
-
 #login {
     aside, #header {
         display: none !important;
@@ -12,7 +10,7 @@ $login-popover-bg: #122F57;
      }
 
     .page-signin .signin-header {
-        background: #a72f38 url('banner-valentin2.jpg') center center no-repeat!important;
+        background: $banner-bg url($banner-img) center center no-repeat !important;
         height:180px;
     }
 
@@ -20,7 +18,7 @@ $login-popover-bg: #122F57;
         background-color: $login-popover-bg;
         border-color: $login-popover-bg;
         text-align:center;
-        color:white;
+        color: $login-popover-color;
         font-size:12px;
         width:150px;
     }
