@@ -1,7 +1,7 @@
 //= require jquery
 //= require moment.min.js
 //= require es.js
-//= require bootstrap-datetimepicker.min.js
+//= require bootstrap-datetimepicker.js
 
 $('#datetimepicker').datetimepicker({
 	pickTime: false
