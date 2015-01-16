@@ -12,9 +12,8 @@
 		
 		<title>Intercambiamesta<g:layoutTitle default=""/></title>
 	
-		<asset:stylesheet src="layout.css"/>
+		<link href='//fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet'>
 
-		<link href='//fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
 		<asset:stylesheet src="font-awesome.min.css"/>
 		<asset:stylesheet src="flaticon.css"/>
 		<asset:stylesheet src="theme.css"/>
@@ -28,7 +27,7 @@
 		<g:layoutHead/>
 	</head>
 
-	<body>
+	<body id="${pageProperty(name: 'body.id')}">
 		<section id="header" class="top-header">
 			<header class="clearfix">
 				<!-- Logo -->
