@@ -3,17 +3,22 @@
 	<head>
 		<title>: Registro</title>
 		<meta name="layout" content="bootstrap">
+
+		<asset:stylesheet src="options.css"/>
 	</head>
-	<body id="login">
+	<body>
 		<div class="page-signin">
 
 		<div class="signin-header">
+			<div class="overlay"></div>
+
 			<div class="container text-center">
 				<section class="logo" style="margin-bottom: 10px;">
 					<a href="${createLink(uri: '/')}"><asset:image src="logo-big.png" alt="Intercambiamesta" /></a>
 				</section>
 
-                <p class="lead"><strong>¡Feliz día del amor y la amistad!</strong></p>
+				<p class="lead" style="margin-bottom: 0"><strong>¡Feliz navidad!</strong> y nuestros mejores deseos</p>
+				<p>Gracias por ser parte de la familia <a href="http://vincoorbis.com/#!/" class="a-brand">Vinco Orbis</a></p>
 			</div>
 		</div>
 
@@ -26,8 +31,8 @@
 						<fieldset>
 							<div class="form-group ${hasErrors(bean: userInstance, field: 'fullname', 'has-error')}">
 								<div class="input-group input-group-lg">
-									<span class="input-group-addon register-addon">
-										<span class="fa flaticon-happy4"></span>
+									<span class="input-group-addon">
+										<span class="fa flaticon-santaclaus"></span>
 									</span>
 									<input type="text"
 										   class="form-control"
@@ -45,8 +50,8 @@
 							</div>
 							<div class="form-group ${hasErrors(bean: userInstance, field: 'username', 'has-error')}">
 								<div class="input-group input-group-lg">
-									<span class="input-group-addon login-addon">
-										<span class="fa flaticon-heart22"></span>
+									<span class="input-group-addon">
+										<span class="glyphicon flaticon-sign16"></span>
 									</span>
 									<input type="email"
 										   class="form-control"
