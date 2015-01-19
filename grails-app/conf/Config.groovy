@@ -128,3 +128,7 @@ grails.plugin.springsecurity.authority.className = 'me.rafaelvargas.intercambiam
 grails.plugin.springsecurity.rejectIfNoRule = false
 grails.plugin.springsecurity.fii.rejectPublicInvocations = false
 grails.plugin.springsecurity.logout.postOnly = false
+
+// Configure SASS/SCSS Asset-Pipeline Plugin
+grails.assets.excludes = ["**/*.scss"]
+grails.assets.includes = ["theme.scss"]
