@@ -1,10 +1,13 @@
 //= require jquery
+//= require snowfall.jquery.js
 //= require jquery.steps.min.js
 //= require analytics.js
 //= require bootstrap
 
 
 jQuery(function ($) {
+    $('.signin-header').snowfall();
+
     $('a.registration').popover({
         animation: false,
         trigger: 'manual',
