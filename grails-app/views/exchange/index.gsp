@@ -39,7 +39,7 @@
 							<div class="col-md-3">
 								<a href="${createLink(action:'show',id:exchangeInstance?.id) }">
 									<section class="panel panel-box">
-										<div class="panel-top bg-success">
+										<div class="panel-top bg-danger">
 											<i class="fa fa-gift text-large"></i>
 										</div>
 										<div class="panel-bottom bg-reverse">
@@ -65,7 +65,6 @@
 					</div>
 				</div>
 			</g:else>
-<%-- 
 			<g:if test="${pastExchanges}">
 				<div class="page-header">
 					<h2>Intercambios pasados</h2>
@@ -73,15 +72,15 @@
 				<div class="container-fluid">
 					<div class="row">
 						<g:each in="${pastExchanges}" status="i" var="exchangeInstance">
-							<div class="col-md-4">
+							<div class="col-md-3">
 								<a href="${createLink(action:'show',id:exchangeInstance?.id) }">
-									<section class="panel panel-box info-box">
-										<div class="panel-left panel-item bg-danger">
-											<i class="fa fa-gift text-large stat-icon"></i>
+									<section class="panel panel-box">
+										<div class="panel-top bg-success">
+											<i class="fa fa-gift text-large"></i>
 										</div>
-										<div class="panel-right panel-item bg-reverse">
-											<p class="size-h1 no-margin">${exchangeInstance.name}</p>
-											<p class="text-muted no-margin">${exchangeInstance?.endDate?.format("dd/MM/yyyy") }</p>
+										<div class="panel-bottom bg-reverse">
+											<p class="size-h1">${exchangeInstance.name}</p>
+											<p class="text-muted">${exchangeInstance?.endDate?.format("dd/MM/yyyy") }</p>
 										</div>
 									</section>
 								</a>
@@ -90,7 +89,6 @@
 					</div>
 				</div>
 			</g:if>
---%>
 		</div>
 	</body>
 </html>

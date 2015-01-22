@@ -3,21 +3,16 @@
 	<head>
 		<title>: Acceso</title>
 		<meta name="layout" content="bootstrap">
-		<asset:stylesheet src="login.css"/>
 	</head>
-	<body>
+	<body id="login">
 		<div class="page-signin">
-
 			<div class="signin-header">
-				<div class="overlay"></div>
-
 				<div class="container text-center">
 					<section class="logo" style="margin-bottom: 10px;">
 						<a href="${createLink(uri: '/')}"><asset:image src="logo-big.png" alt="Intercambiamesta" /></a>
 					</section>
 
-					<p class="lead" style="margin-bottom: 0"><strong>¡Feliz navidad!</strong> y nuestros mejores deseos</p>
-					<p>Gracias por ser parte de la familia <a href="http://vincoorbis.com/#!/" class="a-brand">Vinco Orbis</a></p>
+					<p class="lead"><strong>¡Feliz día del amor y la amistad!</strong></p>
 				</div>
 			</div>
 
@@ -34,8 +29,8 @@
 							<fieldset>
 								<div class="form-group">
 									<div class="input-group input-group-lg">
-										<span class="input-group-addon">
-											<span class="glyphicon flaticon-sign16"></span>
+										<span class="input-group-addon login-addon">
+											<span class="fa flaticon-heart22"></span>
 										</span>
 										<input type="email"
 											   class="form-control"
@@ -58,7 +53,7 @@
 								<div class="form-group">
 								</div>
 								<div class="form-group">
-									<button type="submit" class="btn btn-primary btn-lg btn-block"><span class="fa flaticon-star179"></span> Iniciar sesión</button>
+									<button type="submit" class="btn btn-primary btn-lg btn-block">Iniciar sesión</button>
 								</div>
 							</fieldset>
 						</form>

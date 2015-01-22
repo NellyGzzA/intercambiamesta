@@ -32,7 +32,7 @@
 					<div class="form-group ${hasErrors(bean: userInstance, field: 'fullname', 'has-error')}">
 						<div class="input-group input-group-lg">
 							<span class="input-group-addon">
-								<span class="fa flaticon-santaclaus"></span>
+								<span class="fa flaticon-romantic3"></span>
 							</span>
 							<textarea 
 								   class="form-control"
@@ -41,7 +41,7 @@
 						</div>
 					</div>
 					<div class="form-group">
-						<button type="submit" class="btn btn-primary btn-lg btn-block"><span class="fa flaticon-star179"></span> Enviar</button>
+						<button type="submit" class="btn btn-primary btn-lg btn-block"><span class="fa fa-send"></span> Enviar</button>
 					</div>
 				</fieldset>
 			</form>
