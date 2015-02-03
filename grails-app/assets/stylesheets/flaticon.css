@@ -11,278 +11,425 @@
 [class^="flaticon-"]:before, [class*=" flaticon-"]:before,
 [class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
 	font-family: Flaticon;
-	font-style: normal;
-	font-size:19px;
-}.flaticon-alarm55:before {
+    font-size: 20px;
+    font-style: normal;
+}.flaticon-afro:before {
 	content: "\e000";
 }
-.flaticon-angel7:before {
+.flaticon-amplifier1:before {
 	content: "\e001";
 }
-.flaticon-bag40:before {
+.flaticon-amplifier:before {
 	content: "\e002";
 }
-.flaticon-balloon9:before {
+.flaticon-angelic:before {
 	content: "\e003";
 }
-.flaticon-bell47:before {
+.flaticon-arch:before {
 	content: "\e004";
 }
-.flaticon-bell48:before {
+.flaticon-artificial:before {
 	content: "\e005";
 }
-.flaticon-bell49:before {
+.flaticon-bad:before {
 	content: "\e006";
 }
-.flaticon-bell50:before {
+.flaticon-bear2:before {
 	content: "\e007";
 }
-.flaticon-bible4:before {
+.flaticon-beer5:before {
 	content: "\e008";
 }
-.flaticon-cake17:before {
+.flaticon-birthday3:before {
 	content: "\e009";
 }
-.flaticon-calendar167:before {
+.flaticon-birthday4:before {
 	content: "\e00a";
 }
-.flaticon-candle11:before {
+.flaticon-birthday5:before {
 	content: "\e00b";
 }
-.flaticon-candle12:before {
+.flaticon-birthday:before {
 	content: "\e00c";
 }
-.flaticon-candle13:before {
+.flaticon-biscuits:before {
 	content: "\e00d";
 }
-.flaticon-candy18:before {
+.flaticon-bouquet:before {
 	content: "\e00e";
 }
-.flaticon-candy19:before {
+.flaticon-broken1:before {
 	content: "\e00f";
 }
-.flaticon-candy20:before {
+.flaticon-bunch:before {
 	content: "\e010";
 }
-.flaticon-candy21:before {
+.flaticon-burger1:before {
 	content: "\e011";
 }
-.flaticon-champagne6:before {
+.flaticon-burning:before {
 	content: "\e012";
 }
-.flaticon-chimney3:before {
+.flaticon-cake1:before {
 	content: "\e013";
 }
-.flaticon-christmas289:before {
+.flaticon-candy:before {
 	content: "\e014";
 }
-.flaticon-christmas290:before {
+.flaticon-celebration1:before {
 	content: "\e015";
 }
-.flaticon-christmas291:before {
+.flaticon-celebration2:before {
 	content: "\e016";
 }
-.flaticon-christmas292:before {
+.flaticon-celebration3:before {
 	content: "\e017";
 }
-.flaticon-christmas293:before {
+.flaticon-celebration4:before {
 	content: "\e018";
 }
-.flaticon-coffee114:before {
+.flaticon-celebration5:before {
 	content: "\e019";
 }
-.flaticon-cookie1:before {
+.flaticon-celebration6:before {
 	content: "\e01a";
 }
-.flaticon-document173:before {
+.flaticon-celebration7:before {
 	content: "\e01b";
 }
-.flaticon-donut7:before {
+.flaticon-celebration8:before {
 	content: "\e01c";
 }
-.flaticon-drum23:before {
+.flaticon-children:before {
 	content: "\e01d";
 }
-.flaticon-eighth4:before {
+.flaticon-chinese2:before {
 	content: "\e01e";
 }
-.flaticon-fireplace3:before {
+.flaticon-chocolate:before {
 	content: "\e01f";
 }
-.flaticon-forest6:before {
+.flaticon-christmas2:before {
 	content: "\e020";
 }
-.flaticon-gift67:before {
+.flaticon-christmas3:before {
 	content: "\e021";
 }
-.flaticon-gift68:before {
+.flaticon-circular13:before {
 	content: "\e022";
 }
-.flaticon-gingerbread3:before {
+.flaticon-clown:before {
 	content: "\e023";
 }
-.flaticon-glove7:before {
+.flaticon-cocktail7:before {
 	content: "\e024";
 }
-.flaticon-glove8:before {
+.flaticon-console:before {
 	content: "\e025";
 }
-.flaticon-grater1:before {
+.flaticon-couple12:before {
 	content: "\e026";
 }
-.flaticon-hat19:before {
+.flaticon-couple13:before {
 	content: "\e027";
 }
-.flaticon-heart302:before {
+.flaticon-couple14:before {
 	content: "\e028";
 }
-.flaticon-horseshoe20:before {
+.flaticon-couple15:before {
 	content: "\e029";
 }
-.flaticon-house159:before {
+.flaticon-couple16:before {
 	content: "\e02a";
 }
-.flaticon-ice skate:before {
+.flaticon-couple17:before {
 	content: "\e02b";
 }
-.flaticon-leave1:before {
+.flaticon-couple18:before {
 	content: "\e02c";
 }
-.flaticon-light93:before {
+.flaticon-couple19:before {
 	content: "\e02d";
 }
-.flaticon-light94:before {
+.flaticon-couple20:before {
 	content: "\e02e";
 }
-.flaticon-lollipop6:before {
+.flaticon-couple21:before {
 	content: "\e02f";
 }
-.flaticon-ornament3:before {
+.flaticon-couple22:before {
 	content: "\e030";
 }
-.flaticon-ornament4:before {
+.flaticon-covered1:before {
 	content: "\e031";
 }
-.flaticon-ornament5:before {
+.flaticon-devil1:before {
 	content: "\e032";
 }
-.flaticon-pen71:before {
+.flaticon-devil:before {
 	content: "\e033";
 }
-.flaticon-penguin4:before {
+.flaticon-dj:before {
 	content: "\e034";
 }
-.flaticon-present20:before {
+.flaticon-drummer:before {
 	content: "\e035";
 }
-.flaticon-reindeer3:before {
+.flaticon-email5:before {
 	content: "\e036";
 }
-.flaticon-reindeer4:before {
+.flaticon-energy5:before {
 	content: "\e037";
 }
-.flaticon-ribbon53:before {
+.flaticon-five:before {
 	content: "\e038";
 }
-.flaticon-ribbon54:before {
+.flaticon-fried1:before {
 	content: "\e039";
 }
-.flaticon-ribbon55:before {
+.flaticon-fruit:before {
 	content: "\e03a";
 }
-.flaticon-rocking3:before {
+.flaticon-glass4:before {
 	content: "\e03b";
 }
-.flaticon-sack1:before {
+.flaticon-glasses4:before {
 	content: "\e03c";
 }
-.flaticon-santaclaus:before {
+.flaticon-happy3:before {
 	content: "\e03d";
 }
-.flaticon-shootingstar:before {
+.flaticon-happy4:before {
 	content: "\e03e";
 }
-.flaticon-sign16:before {
+.flaticon-heart21:before {
 	content: "\e03f";
 }
-.flaticon-sled:before {
+.flaticon-heart22:before {
 	content: "\e040";
 }
-.flaticon-snowflake146:before {
+.flaticon-heart23:before {
 	content: "\e041";
 }
-.flaticon-snowflake147:before {
+.flaticon-heart24:before {
 	content: "\e042";
 }
-.flaticon-snowglobe:before {
+.flaticon-heart25:before {
 	content: "\e043";
 }
-.flaticon-snowing10:before {
+.flaticon-heart26:before {
 	content: "\e044";
 }
-.flaticon-snowman18:before {
+.flaticon-heart28:before {
 	content: "\e045";
 }
-.flaticon-snowman19:before {
+.flaticon-heart29:before {
 	content: "\e046";
 }
-.flaticon-snowman20:before {
+.flaticon-heart30:before {
 	content: "\e047";
 }
-.flaticon-sparkler:before {
+.flaticon-hot15:before {
 	content: "\e048";
 }
-.flaticon-stamp12:before {
+.flaticon-hot16:before {
 	content: "\e049";
 }
-.flaticon-star179:before {
+.flaticon-hot17:before {
 	content: "\e04a";
 }
-.flaticon-star180:before {
+.flaticon-hot18:before {
 	content: "\e04b";
 }
-.flaticon-star181:before {
+.flaticon-i11:before {
 	content: "\e04c";
 }
-.flaticon-star182:before {
+.flaticon-icecream5:before {
 	content: "\e04d";
 }
-.flaticon-star183:before {
+.flaticon-inlove:before {
 	content: "\e04e";
 }
-.flaticon-star184:before {
+.flaticon-invitation:before {
 	content: "\e04f";
 }
-.flaticon-star185:before {
+.flaticon-kid:before {
 	content: "\e050";
 }
-.flaticon-stocking1:before {
+.flaticon-king3:before {
 	content: "\e051";
 }
-.flaticon-teddy:before {
+.flaticon-knitted:before {
 	content: "\e052";
 }
-.flaticon-thermometer57:before {
+.flaticon-limit:before {
 	content: "\e053";
 }
-.flaticon-toast:before {
+.flaticon-little42:before {
 	content: "\e054";
 }
-.flaticon-tree113:before {
+.flaticon-localization:before {
 	content: "\e055";
 }
-.flaticon-tree114:before {
+.flaticon-looking3:before {
 	content: "\e056";
 }
-.flaticon-tree115:before {
+.flaticon-looking4:before {
 	content: "\e057";
 }
-.flaticon-turkey7:before {
+.flaticon-love2:before {
 	content: "\e058";
 }
-.flaticon-twig:before {
+.flaticon-love3:before {
 	content: "\e059";
 }
-.flaticon-wine63:before {
+.flaticon-love5:before {
 	content: "\e05a";
+}
+.flaticon-love6:before {
+	content: "\e05b";
+}
+.flaticon-love7:before {
+	content: "\e05c";
+}
+.flaticon-magician1:before {
+	content: "\e05d";
+}
+.flaticon-magic:before {
+	content: "\e05e";
+}
+.flaticon-male8:before {
+	content: "\e05f";
+}
+.flaticon-man75:before {
+	content: "\e060";
+}
+.flaticon-man82:before {
+	content: "\e061";
+}
+.flaticon-man83:before {
+	content: "\e062";
+}
+.flaticon-mic1:before {
+	content: "\e063";
+}
+.flaticon-mirrors:before {
+	content: "\e064";
+}
+.flaticon-more:before {
+	content: "\e065";
+}
+.flaticon-muffin2:before {
+	content: "\e066";
+}
+.flaticon-music16:before {
+	content: "\e067";
+}
+.flaticon-musical7:before {
+	content: "\e068";
+}
+.flaticon-one5:before {
+	content: "\e069";
+}
+.flaticon-opening1:before {
+	content: "\e06a";
+}
+.flaticon-opening:before {
+	content: "\e06b";
+}
+.flaticon-party1:before {
+	content: "\e06c";
+}
+.flaticon-party2:before {
+	content: "\e06d";
+}
+.flaticon-pass:before {
+	content: "\e06e";
+}
+.flaticon-photo8:before {
+	content: "\e06f";
+}
+.flaticon-piece5:before {
+	content: "\e070";
+}
+.flaticon-piece:before {
+	content: "\e071";
+}
+.flaticon-pinwheel:before {
+	content: "\e072";
+}
+.flaticon-pirate:before {
+	content: "\e073";
+}
+.flaticon-pizza4:before {
+	content: "\e074";
+}
+.flaticon-pop:before {
+	content: "\e075";
+}
+.flaticon-present3:before {
+	content: "\e076";
+}
+.flaticon-ring5:before {
+	content: "\e077";
+}
+.flaticon-romantic2:before {
+	content: "\e078";
+}
+.flaticon-romantic3:before {
+	content: "\e079";
+}
+.flaticon-sand:before {
+	content: "\e07a";
+}
+.flaticon-sax:before {
+	content: "\e07b";
+}
+.flaticon-seven:before {
+	content: "\e07c";
+}
+.flaticon-sincerity:before {
+	content: "\e07d";
+}
+.flaticon-solid16:before {
+	content: "\e07e";
+}
+.flaticon-solid17:before {
+	content: "\e07f";
+}
+.flaticon-sound6:before {
+	content: "\e080";
+}
+.flaticon-stars:before {
+	content: "\e081";
+}
+.flaticon-striped3:before {
+	content: "\e082";
+}
+.flaticon-sweet6:before {
+	content: "\e083";
+}
+.flaticon-tshirt2:before {
+	content: "\e084";
+}
+.flaticon-two28:before {
+	content: "\e085";
+}
+.flaticon-type:before {
+	content: "\e086";
+}
+.flaticon-valentines:before {
+	content: "\e087";
+}
+.flaticon-vip2:before {
+	content: "\e088";
+}
+.flaticon-volume14:before {
+	content: "\e089";
+}
+.flaticon-xmas1:before {
+	content: "\e08a";
+}
+.flaticon-xmas:before {
+	content: "\e08b";
 }

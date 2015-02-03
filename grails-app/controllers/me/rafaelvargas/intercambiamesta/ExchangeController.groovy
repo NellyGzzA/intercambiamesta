@@ -24,7 +24,7 @@ class ExchangeController {
 		User userInstance = springSecurityService.currentUser
 		Exchange exchangeInstance = Exchange.findByUserAndId(userInstance,params.id)
 		
-		if(!exchangeInstance || !exchangeInstance.isEditable()) {
+		if(!exchangeInstance) {
 			flash.error = "Intercambio no encontrado"
 			redirect action:'index'
 		}
