@@ -7,7 +7,7 @@
 		<meta name="description" content="">
 		<meta name="author" content="">
 		
-		<meta property="og:image" content="http://i.imgur.com/C91cjNn.png">
+		<meta property="og:image" content="http://i.imgur.com/r7EtDyR.jpg">
 		<meta property="og:title" content="Intercambiamesta">
 		
 		<title>Intercambiamesta<g:layoutTitle default=""/></title>
@@ -51,7 +51,7 @@
 									</span>
 								</a>
 
-								<ul class="dropdown-menu dropdown-dark with-arrow">
+								<ul class="dropdown-menu with-arrow">
 									<li>
 										<a href="${createLink(controller:'logout')}">
 											<i class="fa fa-sign-out"></i>

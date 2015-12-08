@@ -6,15 +6,12 @@
 	</head>
 	<body id="login">
 		<div class="page-signin">
-			<div class="signin-header">
-				<div class="container text-center">
-					<section class="logo" style="margin-bottom: 10px;">
-						<a href="${createLink(uri: '/')}"><asset:image src="logo-big.png" alt="Intercambiamesta" /></a>
-					</section>
-
-					<p class="lead"><strong>¡Feliz día del amor y la amistad!</strong></p>
+			<a href="${createLink(uri: '/')}">
+				<div class="signin-header">
+					<div class="container text-center">
+					</div>
 				</div>
-			</div>
+			</a>
 
 			<div class="signin-body">
 				<div class="container">

@@ -6,14 +6,23 @@ $bootstrap-sass-asset-helper: (twbs-font-path("") != unquote('twbs-font-path("")
 // Variables
 // --------------------------------------------------
 
-// San Valentin 1
-$banner-img: 'banner-valentin1.jpg';
-$banner-bg: #6AC2F9;
-$login-popover-bg: #F8C79A;
-$brand-primary: #6AC2F9;
-$banner-color: #232628;
+// Christmas 2015
+$banner-img: 'christmas-2015.jpg';
+$banner-bg: #fd452a;
+$login-popover-bg: #fd452a;
+$brand-primary: #262e31;
+$banner-color: #ffffff;
 $login-popover-color: $banner-color;
-$nav_bg: #3e66dc;
+$nav_bg: #fd452a;
+
+// San Valentin 1
+// $banner-img: 'banner-valentin1.jpg';
+// $banner-bg: #6AC2F9;
+// $login-popover-bg: #F8C79A;
+// $brand-primary: #6AC2F9;
+// $banner-color: #232628;
+// $login-popover-color: $banner-color;
+// $nav_bg: #3e66dc;
 
 // San Valentin 2
 //$banner-img: 'banner-valentin2.jpg';

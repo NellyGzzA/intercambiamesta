@@ -25,7 +25,7 @@
 			</g:if>
 
 			<div class="text-right">
-				<a href="${createLink(action:"create")}" class="btn btn-primary"><span class="fa fa-gift" style="width:20px;"></span> Nuevo intercambio</a>
+				<a href="${createLink(action:"create")}" class="btn btn-secondary"><span class="fa fa-gift" style="width:20px;"></span> Nuevo intercambio</a>
 			</div>
 
 			<g:if test="${actualExchanges}">

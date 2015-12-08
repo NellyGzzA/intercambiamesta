@@ -1,1 +1,5 @@
 $header_height: 50px;       // top header
+
+.btn-secondary {
+    @include button-variant(#FFFFFF, #FD452A, #FD452A);
+}
