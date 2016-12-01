@@ -88,15 +88,26 @@ grails.hibernate.osiv.readonly = false
 environments {
     development {
         grails.logging.jul.usebridge = true
-		grails.app.context = "/"
-		mandrill {
-			apiKey = ""
-		}
-		contactmail.admin = "rv@manoderecha.mx"
+        grails.app.context = "/"
+        contactmail.admin = "rv@manoderecha.mx"
+        from.mail = "rv@manoderecha.mx"
+        from.name = "Intercambiamesta"
+        domain = "http://intercambiamesta.com"
+        
+        grails{
+            mail {
+                host = "smtp.server.com"
+                port = 587
+                username = "youraccount@account.com"
+                password = "yourpassword"
+                props = ["mail.smtp.starttls.enable":"true", 
+                         "mail.smtp.port":"587"]
+            }
+        }
     }
-	production{
-		grails.config.locations = ["file:/.grails/${appName}/Config.groovy"]
-	}
+    production{
+        grails.config.locations = ["file:/.grails/${appName}/Config.groovy"]
+    }
 }
 
 // log4j configuration
