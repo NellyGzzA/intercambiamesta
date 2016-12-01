@@ -1,15 +1,11 @@
 package me.rafaelvargas.intercambiamesta
 
 import grails.transaction.Transactional
-import org.grails.mandrill.MandrillMessage
-import org.grails.mandrill.MandrillRecipient
-import org.grails.mandrill.MergeVar
-import org.grails.mandrill.RecipientVars
 
 @Transactional
 class ExchangeService {
 	
-	def mandrillService
+	def emailService
 	
 	Exchange save(Exchange exchangeInstance) {
 		exchangeInstance.save(flush:true)
@@ -46,36 +42,12 @@ class ExchangeService {
 	
 	void sendMails(Exchange exchangeInstance) {
 		List users = UserExchange.findAllByExchangeAndUserToIsNotNull(exchangeInstance)
-		List recipients = []
-		List mergeVars = []
-		List contents = [[name:"exchangeName", content:exchangeInstance.name],
-						 [name:"exchangeTheme", content:exchangeInstance.theme],
-						 [name:"exchangeDate", content:exchangeInstance.endDate.format("dd/MM/yyyy")],
-						 [name:"exchangeLimit", content:exchangeInstance.limitAmount]]
-		
-		users.each{ userExchange ->
-			recipients.add(new MandrillRecipient(name:userExchange.userFrom.fullname, email:userExchange.userFrom.username))
-			mergeVars.add( new RecipientVars(rcpt:userExchange.userFrom.username, vars:[new MergeVar(name:"SECRET", content:userExchange.secret),
-																					    new MergeVar(name:"USERTO", content:userExchange.userTo.fullname),
-																						new MergeVar(name:"exchangeId", content:exchangeInstance.id)]) )
-		}
-		
-		MandrillMessage message = new MandrillMessage(to:recipients, merge_vars:mergeVars, subject:"Detalles del intercambio '${exchangeInstance.name}'" )
-		mandrillService.sendTemplate(message, "exchange", contents )
+		emailService.sendExchangeMail(exchangeInstance, users)
 	}
 	
 	private void sendOptionsMail(UserExchange userExchange, Exchange exchangeInstance) {
 		User userFrom = UserExchange.findByUserToAndExchange(userExchange.userFrom, exchangeInstance).userFrom
-		List recipients = [ new MandrillRecipient(name:userFrom.fullname, email:userFrom.username) ]
-		List mergeVars = [ new RecipientVars(rcpt:userFrom.username, vars:[ 
-																						new MergeVar(name:"FIRST", content:userExchange.firstOption?:"&nbsp;"),
-																						new MergeVar(name:"SECOND", content:userExchange.secondOption?:"&nbsp;"),
-																						new MergeVar(name:"THIRD", content:userExchange.thirdOption?:"&nbsp;"),
-																						new MergeVar(name:"COMMENTS", content:userExchange.comments?:"&nbsp;"),
-																						new MergeVar(name:"EXCHANGE", content:exchangeInstance.name),
-																						new MergeVar(name:"USERTO", content:userExchange.userFrom.fullname)]) ]
-		MandrillMessage message = new MandrillMessage(to:recipients, merge_vars:mergeVars, subject:"Peticiones del intercambio '${exchangeInstance.name}'" )
-		mandrillService.sendTemplate(message, "preferences", [] )
+		emailService.sendPreferencesMail(userFrom, userExchange, exchangeInstance)
 	}
 	
 	void saveUserExchange(UserExchange userExchange, Exchange exchangeInstance) {

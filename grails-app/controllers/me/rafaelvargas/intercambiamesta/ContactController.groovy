@@ -1,8 +1,6 @@
 package me.rafaelvargas.intercambiamesta
 
 import grails.plugin.springsecurity.annotation.Secured
-import org.grails.mandrill.MandrillMessage
-import org.grails.mandrill.MandrillRecipient
 
 @Secured(['ROLE_USER'])
 class ContactController {
@@ -10,22 +8,18 @@ class ContactController {
 	static allowedMethods = [index: ['GET','POST']]
 	
 	def springSecurityService
-	def mandrillService
 	def grailsApplication
+	def emailService
 	
 	def index() {
 		if(request.method == 'POST') {
 			User userInstance = springSecurityService.currentUser
 			
 			if(params.message) {
-				
-				List recpts = [new MandrillRecipient(name:"Admin", email:grailsApplication.config.contactmail.admin)]
-				MandrillMessage message = new MandrillMessage(text:params.message, 
-					subject:"Correo de contacto de ${userInstance.username}",
-					from_email:userInstance.username, 
-					to:recpts)
-				
-				mandrillService.send(message)
+				emailService.sendMail(userInstance.username,
+									  [grailsApplication.config.contactmail.admin],
+									  "Correo de contacto de ${userInstance.username}",
+									  params.message)
 				
 				flash.message = "Mensaje enviado"
 			}
